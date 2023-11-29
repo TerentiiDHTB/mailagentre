@@ -13,7 +13,7 @@ export const Header: FunctionComponent = () => {
             <img src={logo} alt={"logo"}/>
             <SearchInput/>
             <section className={styles.userInfo}>
-                <NavLink to="/office">{userInfoStore.getUserName()}</NavLink>
+                <NavLink to="/office" className={styles.userName}>{userInfoStore.getUserName()}</NavLink>
                 <img src={userInfoStore.getUserImage()} alt="userImg" className={styles.userImg}/>
             </section>
         </div>

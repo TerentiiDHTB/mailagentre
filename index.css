@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "MullerRegular";
+    src: local("MullerRegular"), url("./src/shared/fonts/Muller/MullerRegular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MullerMedium";
+    src: local("MullerMedium"), url("./src/shared/fonts/Muller/MullerMedium.ttf") format("truetype");
+    font-weight: normal;
+}
