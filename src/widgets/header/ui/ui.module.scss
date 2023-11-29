@@ -1,0 +1,25 @@
+.headerWrapper{
+  width: auto;
+  height: 7vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .userInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: auto;
+
+    .userImg{
+      margin-left: 1vw;
+    }
+  }
+
+  img{
+    width:5vh;
+    height: 5vh;
+  }
+}
