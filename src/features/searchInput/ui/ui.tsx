@@ -4,6 +4,6 @@ import styles from "./ui.module.scss"
 
 export const SearchInput: FunctionComponent = () => {
     return (
-        <input className={styles.inputWrapper}/>
+        <input type="text" className={styles.inputWrapper}/>
     )
 }

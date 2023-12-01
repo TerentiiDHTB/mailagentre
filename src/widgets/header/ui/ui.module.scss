@@ -1,10 +1,17 @@
 .headerWrapper{
   width: auto;
-  height: 7vh;
+  height: 5vh;
 
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  .logoImg{
+    width: 5vh;
+    height: 5vh;
+
+    margin-right: 0.5vw;
+  }
 
   .userInfo{
     display: flex;
@@ -17,15 +24,19 @@
       text-decoration: none;
       font-family: MullerRegular, serif;
       color: black;
+
+      &:hover{
+        color: #2D9275;
+        border-bottom: 1px solid #2D9275;
+      }
   }
 
     .userImg{
       margin-left: 1vw;
-    }
-  }
+      border-radius: 10px;
 
-  img{
-    width:5vh;
-    height: 5vh;
+      width:5vh;
+      height: 5vh;
+    }
   }
 }

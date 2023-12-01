@@ -8,12 +8,12 @@ export const Footer: FunctionComponent = () => {
         <div className={styles.footerWrapper}>
             <section className={styles.footerLinkSection}>
                 <a href="https://github.com/TerentiiDHTB" target="_blank">
-                    <Github width="5vh" height="5vh" color="black"/>
+                    <Github width="32px" height="32px" color="black"/>
                 </a>
                 <a href="https://t.me/TerentiyTerentiev" target="_blank">
-                    <Telegram width="5vh" height="5vh" color="black"/>
+                    <Telegram width="32px" height="32px" color="black"/>
                 </a>
-                <Envelope width="5vh" height="5vh" color="black"/>
+                <Envelope width="32px" height="32px" color="black"/>
             </section>
 
             <span>somecopyrightthings©</span>
