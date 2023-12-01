@@ -1,0 +1,41 @@
+.mailWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+
+  font-family: MullerRegular;
+
+  .checkStatusImg{
+    margin-left: 1vw;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  .senderName{
+    width: 5vw;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    margin-left: 1vw;
+    text-align: start;
+  }
+
+  .mailText{
+    width: 85%;
+
+    margin-left: 0.5vw;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    text-align: start;
+  }
+
+  .mailDate{
+    margin-left: 1vw;
+  }
+}

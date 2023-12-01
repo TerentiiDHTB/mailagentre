@@ -10,11 +10,11 @@ import uncheckedMail from "@/shared/icons/mailStatus/uncheckedMail/unchecked-mai
 export const Mail: FunctionComponent<MailT> = (props: MailT) => {
     return(
         <div className={styles.mailWrapper}>
-            <input type="checkbox"/>
-            <img src={props.checked? checkedMail: uncheckedMail}/>
-            <span>{props.senderName}</span>
-            <span>{props.text}</span>
-            <span>{props.date}</span>
+            <input type="checkbox" className={styles.mailCheckbox}/>
+            <img src={props.checked? checkedMail: uncheckedMail} alt="mailcheckstatus" className={styles.checkStatusImg}/>
+            <div className={styles.senderName}>{props.senderName}</div>
+            <div className={styles.mailText}>{props.text}</div>
+            <div className={styles.mailDate}>{props.date}</div>
         </div>
     )
 }

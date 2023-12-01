@@ -1,0 +1,16 @@
+.mailsWrapper{
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  .mailsList{
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+
+    .mail{
+      height: 4vh;
+    }
+  }
+}

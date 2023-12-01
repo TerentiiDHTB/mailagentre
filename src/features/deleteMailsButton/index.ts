@@ -1,0 +1,1 @@
+export {DeleteMailsButton} from "./ui/ui.tsx"
