@@ -6,7 +6,7 @@ import userMails from "@/shared/startinfo/userMails.json"
 
 
 class MailStore{
-    mailsList: MailT[] = []
+    private mailsList: MailT[] = []
 
     getMails = (cur_folder_id: string): MailT[] => {
         return this.mailsList.filter((mail) => mail.folder === cur_folder_id)
