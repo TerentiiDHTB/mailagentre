@@ -1,3 +1,5 @@
+@use "@/shared/styles/valuelibrary";
+
 .inputWrapper{
   height: 2.4vh;
   width: 15vw;
@@ -9,10 +11,10 @@
   border-radius: 3px;
 
   &:hover{
-    border-color: #2D9275;
+    border-color: valuelibrary.$main_color;
   }
 
   &:focus{
-    outline-color: #2D9275;
+    outline-color: valuelibrary.$main_color;
   }
 }
