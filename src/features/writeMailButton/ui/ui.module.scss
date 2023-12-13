@@ -1,0 +1,26 @@
+@use "@/shared/styles/valuelibrary";
+
+.writeMailBtn{
+  font-size: 20px;
+  font-family: MullerRegular, serif;
+
+  padding: 10px;
+  padding-block: 10px;
+
+  margin-bottom: 2vh;
+
+  border: 1px solid valuelibrary.$main_color;
+  border-radius: 10px;
+
+  background-color: white;
+
+  &:hover{
+    background-color: valuelibrary.$interaction_color;
+
+    border-color: white;
+
+    color: white;
+
+    cursor: pointer;
+  }
+}

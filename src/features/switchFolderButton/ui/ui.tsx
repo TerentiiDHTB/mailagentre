@@ -1,4 +1,4 @@
-import styles from "./ui.module.scss"
+import styles from "@/shared/styles/folderManagementButton.module.scss"
 
 type SwitchFolderBtnProps = {
     isDisabled: boolean,
@@ -6,7 +6,9 @@ type SwitchFolderBtnProps = {
 
 export const SwitchFolderButton = (props: SwitchFolderBtnProps) => {
     return (
-        <button disabled={props.isDisabled} className={styles.buttonWrapper}>
+        <button
+            disabled={props.isDisabled}
+            className={styles.buttonWrapper}>
             В папку
         </button>)
 }

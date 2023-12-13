@@ -1,0 +1,79 @@
+@use "@/shared/styles/valuelibrary";
+
+.modalWindowWrapper{
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  background-color: rgba(211, 211, 211, 0.8);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contentWrapper{
+    width: 18vw;
+
+    padding: 2vh 2vw 0 2vw;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+
+    & *{
+      font-family: MullerRegular, Serif;
+      font-size: 16px;
+
+      border-radius: 5px;
+
+      margin-bottom: 2vh;
+    }
+
+    & button{
+      background-color: transparent;
+      border: 1px solid black;
+
+      &:hover{
+        background-color: valuelibrary.$interaction_color;
+
+        color: white;
+
+        cursor: pointer;
+      };
+    }
+
+    .windowInfo{
+      display: flex;
+
+      width: 100%;
+
+      margin: 0;
+    }
+
+    .closeButton{
+      margin-left: auto;
+
+      border: none;
+      padding: 0;
+      padding-block: 0;
+      background-color: transparent;
+
+      &:hover{
+        color: crimson;
+        cursor: pointer;
+        background-color: transparent;
+      }
+    }
+  }
+}

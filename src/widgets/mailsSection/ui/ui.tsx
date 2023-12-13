@@ -4,8 +4,11 @@ import {observer} from "mobx-react-lite";
 
 import {SwitchFolderButton} from "@/features/switchFolderButton";
 import {DeleteMailsButton} from "@/features/deleteMailsButton";
+import {Mail} from "@/entities/mail";
+
 import {mailStore} from "@/shared/stores/mailStore/mailStore.ts";
-import {Mail} from "@/entities/mail/ui/ui.tsx";
+import {folderStore} from "@/shared/stores/folderStore/folderStore.ts";
+
 
 export const MailsSection = observer(() => {
     return (
@@ -17,7 +20,7 @@ export const MailsSection = observer(() => {
 
             <ul className={styles.mailsList}>
                 {
-                    mailStore.getMails("inbox").map((mail) =>
+                    mailStore.getMails(folderStore.getCurrentFolder()).map((mail) =>
                         <li className={styles.mail} key={mail.id}>
                             <Mail {...mail}/>
                         </li>

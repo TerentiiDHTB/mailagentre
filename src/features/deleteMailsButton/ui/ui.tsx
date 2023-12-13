@@ -1,4 +1,4 @@
-import styles from "./ui.module.scss"
+import styles from "@/shared/styles/folderManagementButton.module.scss"
 
 export const DeleteMailsButton = () => {
     return (

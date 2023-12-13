@@ -1,0 +1,41 @@
+@use "@/shared/styles/valuelibrary";
+
+.folderWrapper{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  .folderName{
+    border: none;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+
+    padding-block: 0;
+    padding: 0;
+    padding-inline: 0;
+
+    background-color: transparent;
+
+    color: white;
+    font-family: MullerRegular, serif;
+    font-size: 18px;
+
+    &:hover{
+      color: valuelibrary.$interaction_color;
+      border-bottom: 1px solid valuelibrary.$interaction_color;
+
+      cursor: pointer;
+    }
+  }
+
+  .deleteFolder{
+    width: 2vh;
+    height: 2vh;
+
+    &:hover{
+      cursor: pointer;
+      background-color: red;
+    }
+  }
+}

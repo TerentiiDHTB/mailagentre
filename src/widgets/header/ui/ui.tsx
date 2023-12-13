@@ -1,7 +1,7 @@
 import {FunctionComponent} from "react";
 
 import styles from "./ui.module.scss"
-import logo from "@/shared/icons/logo/main-logo.svg"
+import logo from "@/shared/icons/main-logo.svg"
 
 import {SearchInput} from "@/features/searchInput";
 import {NavLink} from "react-router-dom";

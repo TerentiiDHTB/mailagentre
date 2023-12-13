@@ -4,8 +4,8 @@ import styles from "./ui.module.scss"
 
 import {MailT} from "@/shared/types";
 
-import checkedMail from "@/shared/icons/mailStatus/checkedMail/checked-mail-img.svg"
-import uncheckedMail from "@/shared/icons/mailStatus/uncheckedMail/unchecked-mail-img.svg"
+import checkedMail from "@/shared/icons/mailStatus/checked-mail-img.svg"
+import uncheckedMail from "@/shared/icons/mailStatus/unchecked-mail-img.svg"
 
 export const Mail: FunctionComponent<MailT> = (props: MailT) => {
     return(

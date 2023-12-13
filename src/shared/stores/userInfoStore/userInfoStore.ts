@@ -1,6 +1,6 @@
 import {makeAutoObservable} from "mobx";
 
-import userLogo from "../../icons/userLogo/userImg.png"
+import userLogo from "../../icons/userImg.png"
 
 class UserInfoStore {
     private userName: string

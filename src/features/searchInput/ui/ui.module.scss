@@ -11,10 +11,10 @@
   border-radius: 3px;
 
   &:hover{
-    border-color: valuelibrary.$main_color;
+    border-color: valuelibrary.$interaction_color;
   }
 
   &:focus{
-    outline-color: valuelibrary.$main_color;
+    outline-color: valuelibrary.$interaction_color;
   }
 }

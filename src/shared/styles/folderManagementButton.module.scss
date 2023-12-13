@@ -1,0 +1,20 @@
+@use "@/shared/styles/valuelibrary";
+
+.buttonWrapper{
+  background-color: transparent;
+  border: 1px solid transparent;
+
+  margin-right: 1vw;
+  padding-block: 2px;
+
+  font-family: MullerRegular, serif;
+  font-size: 14px;
+
+  &:hover:enabled{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px valuelibrary.$interaction_color;
+
+    color: valuelibrary.$interaction_color;
+    cursor: pointer;
+  }
+}

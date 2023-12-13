@@ -1,0 +1,22 @@
+[
+  {
+    "folderName":"Входящие",
+    "folderId": "inbox"
+  },
+  {
+    "folderName":"Отправленные",
+    "folderId": "sent"
+  },
+  {
+    "folderName":"Черновики",
+    "folderId": "draft"
+  },
+  {
+    "folderName": "Удаленные",
+    "folderId": "deleted"
+  },
+  {
+    "folderName":"Спам",
+    "folderId": "spam"
+  }
+]

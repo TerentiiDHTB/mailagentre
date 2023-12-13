@@ -1,9 +1,17 @@
+@use "@/shared/styles/valuelibrary";
+
 .mailsWrapper{
   display: flex;
   flex-direction: column;
 
-  height: 100%;
+  padding: 1vh;
+
+  height: 97.5%;
   width: 85%;
+
+  border: 1px solid valuelibrary.$opposite_color;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 2px 2px 20px valuelibrary.$opposite_color;
 
   .mailsList{
     margin-left: 0;

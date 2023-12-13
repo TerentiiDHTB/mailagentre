@@ -1,3 +1,5 @@
+@use "@/shared/styles/valuelibrary";
+
 .headerWrapper{
   width: auto;
   height: 5vh;
@@ -26,8 +28,8 @@
       color: black;
 
       &:hover{
-        color: #2D9275;
-        border-bottom: 1px solid #2D9275;
+        color: valuelibrary.$interaction_color;
+        border-bottom: 1px solid valuelibrary.$interaction_color;
       }
   }
 
