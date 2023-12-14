@@ -1,16 +1,13 @@
 import styles from "./ui.module.scss"
 
-import React, {FunctionComponent, useEffect} from "react";
+import type {CreateModalWindowProps} from "./types.ts"
+
+import {FunctionComponent, useEffect} from "react";
 import {createPortal} from "react-dom";
 
-type modalWindowProps = {
-    children: React.ReactNode,
-    windowName: string,
-    isShown: boolean,
-    hide: () => void
-}
+
 //разнести все..
-export const ModalWindowTemplate: FunctionComponent<modalWindowProps> = (props: modalWindowProps) => {
+export const ModalWindowTemplate: FunctionComponent<CreateModalWindowProps> = (props: CreateModalWindowProps) => {
     const onKeyDown = (event: KeyboardEvent) => {
         if (event.code === "Escape" && props.isShown) {
             props.hide();
