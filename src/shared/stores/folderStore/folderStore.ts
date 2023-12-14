@@ -20,6 +20,12 @@ class FolderStore{
 
     createFolder = (folderName: string) => {this.folders.push({folderName, folderId: nanoid(), enableEdit: true})}
 
+    renameFolder = (newName: string, folderId: string) => {
+        this.folders.map((item) => {
+            if (item.folderId === folderId){item.folderName = newName}
+        })
+    }
+
     deleteFolder = (folderId: string) => {
         this.folders = this.folders.filter((item) => item.folderId !== folderId)
         this.currentFolder = "inbox"

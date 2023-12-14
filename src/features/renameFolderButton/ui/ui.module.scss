@@ -1,0 +1,13 @@
+@use "@/shared/styles/valuelibrary";
+
+.renameFolder{
+  width: 2vh;
+  height: 2vh;
+
+  border-radius: 5px;
+
+  &:hover{
+    cursor: pointer;
+    background-color: valuelibrary.$interaction_color;
+  }
+}

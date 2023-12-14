@@ -28,14 +28,4 @@
       cursor: pointer;
     }
   }
-
-  .deleteFolder{
-    width: 2vh;
-    height: 2vh;
-
-    &:hover{
-      cursor: pointer;
-      background-color: red;
-    }
-  }
 }
