@@ -1,6 +1,6 @@
 import {RouteType} from "./types.ts";
 
-import {Main} from "../../pages/main";
+import {Main} from "@/pages/main";
 
 export const routes: RouteType[] = [
     {

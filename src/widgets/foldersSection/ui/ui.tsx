@@ -4,7 +4,7 @@ import styles from "./ui.module.scss"
 
 import {folderStore} from "@/shared/stores/folderStore/folderStore.ts";
 
-import {Folder} from "@/entities/folder/ui/ui.tsx";
+import {Folder} from "@/entities/folder/";
 import {CreateFolderButton} from "@/features/createFolderButton";
 import {WriteMailButton} from "@/features/writeMailButton";
 import {DeleteFolderButton} from "@/features/deleteFolderButton";

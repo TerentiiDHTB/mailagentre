@@ -3,7 +3,6 @@ import styles from "./ui.module.scss";
 
 import {RenameFolderModalWindow} from "../ui/renameFolderModalWindow.tsx";
 import {useModal} from "@/shared/modalWindowTemplate";
-
 import {FolderT} from "@/shared/types";
 
 export const RenameFolderButton = (props: FolderT) => {

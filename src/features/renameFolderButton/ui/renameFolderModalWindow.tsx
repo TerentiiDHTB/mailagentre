@@ -15,7 +15,10 @@ export const RenameFolderModalWindow = (props: CallModalWindowProps & FolderT) =
             <input value={newName} onChange={event => {setNewName(event.target.value)}}/>
             <label hidden={!errMessShow} style={{color:"red"}}>введите имя папочки</label>
             <button
-                onClick={() => {clickHandler(newName, props.folderId, props.hide, setErrMessShow); setNewName("")}}
+                onClick={() => {
+                    clickHandler(newName, props.folderId, props.hide, setErrMessShow);
+                    setNewName("")
+                }}
             >
                 переименовать
             </button>
