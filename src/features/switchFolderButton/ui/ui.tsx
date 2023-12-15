@@ -1,14 +1,12 @@
 import styles from "@/shared/styles/folderManagementButton.module.scss"
+import {ManageMailsButtonType} from "@/shared/types";
 
-type SwitchFolderBtnProps = {
-    isDisabled: boolean,
-}
-
-export const SwitchFolderButton = (props: SwitchFolderBtnProps) => {
+export const SwitchFolderButton = (props: ManageMailsButtonType) => {
     return (
         <button
             disabled={props.isDisabled}
-            className={styles.buttonWrapper}>
+            className={styles.buttonWrapper}
+        >
             В папку
         </button>)
 }

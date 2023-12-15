@@ -6,27 +6,32 @@ import generalFolders from "@/shared/startinfo/generalFolders.json"
 import {makeAutoObservable} from "mobx";
 import {nanoid} from "nanoid";
 
+//TODO: сделать айди папок енумами
+
 class FolderStore{
     private folders: FolderT[]
     private currentFolder: string
 
-    getFolders = () => this.folders
+    getFolders = (): FolderT[] => this.folders
 
-    getCurrentFolder = () => this.currentFolder
+    getCurrentFolder = (): string => this.currentFolder
 
-    setCurrentFolder = (folder: string) => {
+    setCurrentFolder = (folder: string): void => {
         this.currentFolder = folder
     }
 
-    createFolder = (folderName: string) => {this.folders.push({folderName, folderId: nanoid(), enableEdit: true})}
+    createFolder = (folderName: string): void => {this.folders.push({folderName, folderId: nanoid(), enableEdit: true})}
 
-    renameFolder = (newName: string, folderId: string) => {
-        this.folders.map((item) => {
-            if (item.folderId === folderId){item.folderName = newName}
-        })
+    renameFolder = (newName: string, folderId: string): void => {
+        for (let folder of this.folders){
+            if (folder.folderId === folderId){
+                folder.folderName = newName
+                return
+            }
+        }
     }
 
-    deleteFolder = (folderId: string) => {
+    deleteFolder = (folderId: string): void => {
         this.folders = this.folders.filter((item) => item.folderId !== folderId)
         this.currentFolder = "inbox"
     }

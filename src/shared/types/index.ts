@@ -1,2 +1,3 @@
-export type {FolderT} from "./folderType/FolderType.ts"
-export type {MailT} from "./mailType/MailType.ts"
+export type {FolderT} from "./FolderType.ts"
+export type {MailT} from "./MailType.ts"
+export type {ManageMailsButtonType} from "./ManageMailsButtonType.ts"

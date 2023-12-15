@@ -11,11 +11,13 @@ import {folderStore} from "@/shared/stores/folderStore/folderStore.ts";
 
 
 export const MailsSection = observer(() => {
+    const isMailChosen = !mailStore.isMailsChosen(folderStore.getCurrentFolder())
+
     return (
         <div className={styles.mailsWrapper}>
             <section>
-                <SwitchFolderButton isDisabled={true}/>
-                <DeleteMailsButton/>
+                <SwitchFolderButton isDisabled={isMailChosen}/>
+                <DeleteMailsButton isDisabled={isMailChosen}/>
             </section>
 
             <ul className={styles.mailsList}>
