@@ -2,7 +2,7 @@ import styles from "./ui.module.scss"
 
 import {FolderT} from "@/shared/types";
 
-import {clickHandler} from "@/entities/folder/model/clickHandler.ts";
+import {clickHandler} from "../model/clickHandler.ts";
 
 export const Folder = (props: FolderT) => {
     return(

@@ -11,7 +11,7 @@ import {folderStore} from "@/shared/stores/folderStore/folderStore.ts";
 
 
 export const MailsSection = observer(() => {
-    const isMailChosen = !mailStore.isMailsChosen(folderStore.getCurrentFolder())
+    const isMailChosen = !mailStore.isMailsChosen(folderStore.getCurrentFolderId())
 
     return (
         <div className={styles.mailsWrapper}>
@@ -22,7 +22,7 @@ export const MailsSection = observer(() => {
 
             <ul className={styles.mailsList}>
                 {
-                    mailStore.getMails(folderStore.getCurrentFolder()).map((mail) =>
+                    mailStore.getMails(folderStore.getCurrentFolderId()).map((mail) =>
                         <li className={styles.mail} key={mail.id}>
                             <Mail {...mail}/>
                         </li>

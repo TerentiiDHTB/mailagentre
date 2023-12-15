@@ -35,11 +35,19 @@ class MailStore{
         }
     }
 
+    switchMailsFolder = (newFolderId: string): void => {
+        for (let mail of this.mailsList){
+            if (mail.chosen){
+                mail.folder = newFolderId
+                mail.chosen = false
+            }
+        }
+    }
+
     isMailsChosen = (folderId: string): boolean => {
         for (let mail of this.mailsList){
             if (mail.chosen && mail.folder === folderId){
                 return true;
-                break;
             }
         }
 

@@ -10,14 +10,14 @@ import {nanoid} from "nanoid";
 
 class FolderStore{
     private folders: FolderT[]
-    private currentFolder: string
+    private currentFolderId: string
 
     getFolders = (): FolderT[] => this.folders
 
-    getCurrentFolder = (): string => this.currentFolder
+    getCurrentFolderId = (): string => this.currentFolderId
 
-    setCurrentFolder = (folder: string): void => {
-        this.currentFolder = folder
+    setCurrentFolderId = (folder: string): void => {
+        this.currentFolderId = folder
     }
 
     createFolder = (folderName: string): void => {this.folders.push({folderName, folderId: nanoid(), enableEdit: true})}
@@ -33,12 +33,12 @@ class FolderStore{
 
     deleteFolder = (folderId: string): void => {
         this.folders = this.folders.filter((item) => item.folderId !== folderId)
-        this.currentFolder = "inbox"
+        this.currentFolderId = "inbox"
     }
 
     constructor() {
         this.folders = []
-        this.currentFolder = "inbox"
+        this.currentFolderId = "inbox"
 
         generalFolders.map((folder) => this.folders.push({...folder, enableEdit: false} as FolderT))
 
