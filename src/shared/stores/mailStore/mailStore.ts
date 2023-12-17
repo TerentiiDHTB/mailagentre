@@ -4,7 +4,6 @@ import {makeAutoObservable} from "mobx";
 
 import userMails from "@/shared/startinfo/userMails.json"
 
-
 class MailStore{
     private mailsList: MailT[] = []
 
@@ -15,7 +14,16 @@ class MailStore{
     toggleSelectStatus = (mailId: string): void => {
         this.mailsList.forEach((item) => {
             if (item.id === mailId){
-                item.chosen = !item.chosen
+                item.chosen = !item.chosen;
+                return
+            }
+        })
+    }
+
+    toggleCheckStatus = (mailId: string) => {
+        this.mailsList.forEach((mail) => {
+            if (mail.id === mailId){
+                mail.checked = !mail.checked;
                 return
             }
         })
@@ -27,7 +35,7 @@ class MailStore{
             return
         }
 
-        for (let mail of this.mailsList){
+        for (const mail of this.mailsList){
             if (mail.chosen){
                 mail.folder = "deleted";
                 mail.chosen = false
@@ -36,7 +44,7 @@ class MailStore{
     }
 
     switchMailsFolder = (newFolderId: string): void => {
-        for (let mail of this.mailsList){
+        for (const mail of this.mailsList){
             if (mail.chosen){
                 mail.folder = newFolderId
                 mail.chosen = false
@@ -45,7 +53,7 @@ class MailStore{
     }
 
     isMailsChosen = (folderId: string): boolean => {
-        for (let mail of this.mailsList){
+        for (const mail of this.mailsList){
             if (mail.chosen && mail.folder === folderId){
                 return true;
             }
