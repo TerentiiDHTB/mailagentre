@@ -9,11 +9,12 @@ import {CreateFolderButton} from "@/features/createFolderButton";
 import {WriteMailButton} from "@/features/writeMailButton";
 import {DeleteFolderButton} from "@/features/deleteFolderButton";
 import {RenameFolderButton} from "@/features/renameFolderButton";
+import {WriteMailButtonType} from "@/shared/types/WriteMailButtonType.ts";
 
-export const FoldersSection = observer(() => {
+export const FoldersSection = observer((props: WriteMailButtonType) => {
     return(
         <div className={styles.foldersSectionWrapper}>
-            <WriteMailButton/>
+            <WriteMailButton mutateState={props.mutateState}/>
             <ul className={styles.foldersListWrapper}>
                 {folderStore.getFolders().map(folder =>
                     <li key={folder.folderId} className={styles.folderWrapper}>

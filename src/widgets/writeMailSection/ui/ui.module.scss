@@ -1,0 +1,76 @@
+@use "@/shared/styles/valuelibrary";
+
+.writeMailSectionWrapper{
+  width: 79vw;
+  height: 97.5%;
+
+  padding: 1vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  border: 1px solid valuelibrary.$opposite_color;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 2px 2px 20px valuelibrary.$opposite_color;
+
+  font-family: MullerRegular, serif;
+
+  .inputLabel{
+    font-size: 18px;
+    margin-bottom: 1vh;
+  }
+
+  .input{
+    height: 3vh;
+    width: 80%;
+
+    margin-bottom: 2vh;
+
+    font-family: MullerRegular, serif;
+    font-size: 18px;
+    color: valuelibrary.$interaction_color;
+
+    &:hover{
+      border-color: valuelibrary.$interaction_color;
+    }
+
+    &:focus{
+      outline-color: valuelibrary.$interaction_color;
+    }
+  }
+
+  .mailTextField{
+    height: 68%;
+    width: 99.5%;
+
+    resize: none;
+
+    margin-bottom: 2vh;
+
+    font-family: MullerRegular, serif;
+    font-size: 16px;
+
+    &:focus{
+      outline-color: valuelibrary.$interaction_color;
+    }
+  }
+
+  .actionButton{
+    margin-right: 2vw;
+    padding: 5px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    font-family: MullerRegular, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    &:hover{
+      background-color: valuelibrary.$interaction_color;
+      color: white;
+    }
+  }
+}
