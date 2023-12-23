@@ -29,14 +29,15 @@
 
     font-family: MullerRegular, serif;
     font-size: 18px;
-    color: valuelibrary.$interaction_color;
 
     &:hover{
       border-color: valuelibrary.$interaction_color;
+      color: valuelibrary.$interaction_color;
     }
 
     &:focus{
       outline-color: valuelibrary.$interaction_color;
+      color: valuelibrary.$interaction_color;
     }
   }
 

@@ -23,7 +23,7 @@ class FolderStore{
     createFolder = (folderName: string): void => {this.folders.push({folderName, folderId: nanoid(), enableEdit: true})}
 
     renameFolder = (newName: string, folderId: string): void => {
-        for (let folder of this.folders){
+        for (const folder of this.folders){
             if (folder.folderId === folderId){
                 folder.folderName = newName
                 return
