@@ -3,12 +3,21 @@ import {MailT} from "@/shared/types";
 import {makeAutoObservable} from "mobx";
 
 import userMails from "@/shared/startinfo/userMails.json"
+import {nanoid} from "nanoid";
+
+const GetCurrentDate = (): string => {
+    const date = new Date()
+    const day: string = date.getDate() < 10? `0${date.getDate()}`: `${date.getDate()}`
+    const month: string = date.getMonth() < 9? `0${date.getMonth()+1}`: `${date.getMonth()+1}`
+
+    return `${day}.${month}.${date.getFullYear()}`
+}
 
 class MailStore{
     private mailsList: MailT[] = []
 
-    getMails = (cur_folder_id: string): MailT[] => {
-        return this.mailsList.filter((mail) => mail.folder === cur_folder_id)
+    getMails = (curFolderId: string): MailT[] => {
+        return this.mailsList.filter((mail) => mail.folder === curFolderId)
     }
 
     toggleSelectStatus = (mailId: string): void => {
@@ -26,6 +35,21 @@ class MailStore{
                 mail.checked = !mail.checked;
                 return
             }
+        })
+    }
+
+    addMail = (receiverMail: string, msgText: string): void => {
+        this.mailsList.push({
+            senderMail: "username@mail.ru",
+            senderName: "username",
+            receiverMail: receiverMail,
+            receiverName: receiverMail.split("@")[0],
+            date: GetCurrentDate(),
+            folder: "sent",
+            checked: false,
+            chosen: false,
+            text: msgText,
+            id: nanoid()
         })
     }
 

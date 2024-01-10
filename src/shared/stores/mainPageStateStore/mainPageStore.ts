@@ -1,4 +1,5 @@
 import {MailsSectionState} from "@/shared/enums/mailsSectionState.ts";
+
 import {makeAutoObservable} from "mobx";
 
 class MainPageStore{
@@ -9,7 +10,6 @@ class MainPageStore{
     setCurrentSection = (section: MailsSectionState): void => {
         if (this.currentSection !== section){
             this.currentSection = section
-            console.log("switched")
         }
     }
 

@@ -6,7 +6,6 @@ import {mailStore} from "@/shared/stores/mailStore/mailStore.ts";
 const nonChangableFolders = ["sent", "draft"]
 
 export const ChangeFolderModalWindow = (props: CallModalWindowProps) => {
-    console.log(folderStore.getCurrentFolderId())
     return(
         <ModalWindowTemplate windowName={props.windowName} isShown={props.isShown} hide={props.hide}>
             <ul key="folders">
