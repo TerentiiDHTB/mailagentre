@@ -1,4 +1,4 @@
-import deleteIcon from "@/shared/icons/trashcan-img.svg";
+import deleteIcon from "@/shared/assets/icons/trashcan-img.svg";
 import styles from "./ui.module.scss";
 
 import {useModal} from "@/shared/modalWindowTemplate";

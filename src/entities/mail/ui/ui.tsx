@@ -4,8 +4,8 @@ import styles from "./ui.module.scss"
 
 import {MailT} from "@/shared/types";
 
-import checkedMail from "@/shared/icons/mailStatus/checked-mail-img.svg"
-import uncheckedMail from "@/shared/icons/mailStatus/unchecked-mail-img.svg"
+import checkedMail from "@/shared/assets/icons/mailStatus/checked-mail-img.svg"
+import uncheckedMail from "@/shared/assets/icons/mailStatus/unchecked-mail-img.svg"
 
 import {mailStore} from "@/shared/stores/mailStore/mailStore.ts";
 

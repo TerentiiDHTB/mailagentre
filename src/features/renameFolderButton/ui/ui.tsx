@@ -1,4 +1,4 @@
-import renameIcon from "@/shared/icons/pencil-img.svg";
+import renameIcon from "@/shared/assets/icons/pencil-img.svg";
 import styles from "./ui.module.scss";
 
 import {RenameFolderModalWindow} from "../ui/renameFolderModalWindow.tsx";
